@@ -508,6 +508,8 @@ if (typeof jQuery === 'undefined') {
   // =================
 
   var clickHandler = function (e) {
+    e.preventDefault()
+
     var $this   = $(this)
     var href    = $this.attr('href')
     if (href) {
@@ -529,7 +531,6 @@ if (typeof jQuery === 'undefined') {
       $target.data('bs.carousel').to(slideIndex)
     }
 
-    e.preventDefault()
   }
 
   $(document)
